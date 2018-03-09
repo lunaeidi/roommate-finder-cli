@@ -18,9 +18,9 @@ class RoomScraper
   end
   def scrape_row(row) #scrape an individual row
     {
-      :date_created => row.search("time").attribute("datetime").text
+      :date_created => row.search("time").attribute("datetime").text,
     :title=> row.search("a.hdrlnk").text,
-    :url=> "#{index_url}#{row.search("a.hdrlnk").attribute("href").text}" #need the beginning so that it's absolute and not relative path
+    :url=> "#{index_url}#{row.search("a.hdrlnk").attribute("href").text}", #need the beginning so that it's absolute and not relative path
     :price=> row.search("span.price").text
       }
 
