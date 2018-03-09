@@ -2,7 +2,7 @@ class RoomScraper
   def initialize(index_url)
     @index_url= index_url
     @doc= Nokogiri::HTML(open(index_url))
-    binding.pry
+
   end
   # def scrape_time
   #   @doc.search("span.pl time")
